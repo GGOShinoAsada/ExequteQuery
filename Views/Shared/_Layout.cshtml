@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - ComputerStore Protorype</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" type="text/css" href="~/Content/Mystelesheet.css" />
+</head>
+<body>
+    <nav>
+        <ul class="topmenu">
+            <li><a href="">Home</a></li>
+            <li><a href="">Shop</a></li>
+            <li>
+                <a href="" class="down">Blog</a>
+                <ul class="submenu">
+                    <li><a href="">Category</a></li>
+                    <li><a href="">Author</a></li>
+                    <li><a href="">Archive</a></li>
+                    <li><a href="">Tags</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="" class="down">Portfolio</a>
+                <ul class="submenu">
+                    <li><a href="">Category</a></li>
+                    <li><a href="">Author</a></li>
+                    <li><a href="">Archive</a></li>
+                    <li><a href="">Tags</a></li>
+                </ul>
+            </li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
